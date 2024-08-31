@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selamat Datang &#x1F973;</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/style.js" type="text/javascript"></script>
+	<script>
+	$(function(){
+
+		$("#typed").typed({
+			strings: ["Halloo... 👋👋", "Hari ini tanggal 7 November", "Hari ini hari ulang tahun kamu kan..", "Selamat ulang tahun yaa.. :) 🥳🥳🥳", "Semoga panjang umur 🤲🤲", "Sehat selalu.. 🤲🤲", "Dimudahkan rezekinya.. 🤲🤲", "Dimudahkan segala urusannya.. 🤲🤲", "Dimudahkan segalanyaa... 🤲🤲", "Doa - doa yg terbaik pokonyaa..", "Sekali lagi selamat ulang tahun yaa :) 🥳🥳🥳", "Terus klik next yg ada dibawah yaa.. nanti ada kembang api layar nya bisa di tap tap terus"],
+			typeSpeed: 35,
+      callback: function(){
+        shift();
+      }
+		});
+
+	});
+  function shift(){
+      $(".head-wrap").addClass("shift-text");
+      terminalHeight();
+  }
+
+  function terminalHeight(){
+      var termHeight = $(".terminal-height");
+      var value = termHeight.text();
+      value = parseInt(value);
+      setTimeout(function(){
+          if (value > 10){
+              value = value-1;
+              this.txtValue = value.toString();
+              termHeight.text(this.txtValue);
+              self.terminalHeight();
+          }
+          else{
+              clearTimeout();
+          }
+      }, 10);
+  }
+	</script>
+</head>
+<body>
+
+<div class="header">
+	<div class="head-wrap">
+		<h1 class="h1">Selamat Datang &#x1F64F;</h1>
+		<div class="text-editor-wrap">
+			<div class="title-bar"><span class="title">whoami &mdash; bash &mdash; 80x<span class="terminal-height">25</span></span></div>
+			<div class="text-body">
+				$ <span id="typed"></span>
+			</div>
+		</div>
+	</div>
+  <div class="wrap">
+    <a href="hbd.html" style="color: #068FFF; background-color: #fff; padding: 10px 20px; border-radius: 10px 10px 10px 10px;">Next</a>
+  </div>
+</div>
+
+</body>
+</html>
