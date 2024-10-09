@@ -103,9 +103,9 @@ p {
 
 /* text editor styles */
 .text-editor-wrap {
-  /* display: block;
+  display: block;
   margin: auto;
-  max-width: 530px; */
+  max-width: 730px;
   border-radius: 10px 10px 10px 10px;
   /* box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px; */
   /* clear: both; */
@@ -149,7 +149,7 @@ p {
 }
 
 .text-body {
-  height: 250px;
+  height: 350px;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 10px;
   color: #f0f0f0;
